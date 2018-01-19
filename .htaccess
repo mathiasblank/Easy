@@ -1,0 +1,9 @@
+
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteBase /easy/
+
+RewriteRule ^([a-z]+)/$ index.php?ctr=$1 [L]
+RewriteRule ^([a-z]+)/([a-z]+)/$ index.php?ctr=$1&act=$2 [L]
+RewriteRule ^([a-z]+)/([a-z]+)/([a-z0-9]+)/$ index.php?ctr=$1&act=$2&arg=$3 [L]
